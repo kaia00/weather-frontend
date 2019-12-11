@@ -13,11 +13,11 @@
   margin-bottom: 16pt;
 }
 
-.Input-style {
+.Input {
   border: "2px solid pink";
 }
 
-.SaveButton-style {
+.Save {
   background-color: #7f82b3;
   color: white;
   font-size: 16px;

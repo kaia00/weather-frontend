@@ -28,14 +28,14 @@ const AddCity = () => {
     <div className="Content">
       <label className="Label" htmlFor="cityName">Enter cityname:</label>
       <input
-        className="Input-style"
+        className="Input"
         id="cityName"
         name="cityName"
         type="text"
         value={cityName}
         onChange={handleChange}
       />
-      <button className="SaveButton-style" onClick={handleSubmit}>
+      <button className="Save" onClick={handleSubmit}>
         Save city!
       </button>
     </div>
