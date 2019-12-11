@@ -35,34 +35,28 @@ const HomePage = () => {
     <header className="App-header">
       <h1 className="Welcome">Welcome to weather information!</h1>
       <div>
-        <h1>Cities:</h1>
-        {cities.length
+        {cities
           ? cities.map(city => (
-              <div key={city.id}>
-                <h1>{city.name}</h1>
-                <button
-                  style={deleteButtonStyle}
-                  onClick={() => handleDelete(city.id)}
-                >
-                  delete
-                </button>
-                {city.weathers.map(weather => (
-                  <WeatherBox key={weather.id} weather={weather} />
-                ))}
+              <div>
+                <h1>Cities:</h1>
+                <div key={city.id}>
+                  <h1>{city.name}</h1>
+                  <button
+                    className="Delete"
+                    onClick={() => handleDelete(city.id)}
+                  >
+                    delete
+                  </button>
+                  {city.weathers.map(weather => (
+                    <WeatherBox key={weather.id} weather={weather} />
+                  ))}
+                </div>
               </div>
             ))
           : null}
       </div>
-      <a className="App-navigation-link" href="/add">
-        Add City
-      </a>
     </header>
   );
-};
-
-const deleteButtonStyle = {
-  background: "red",
-  border: "2px solid pink"
 };
 
 export default HomePage;

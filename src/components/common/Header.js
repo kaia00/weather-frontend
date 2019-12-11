@@ -1,14 +1,14 @@
 import React from "react";
-import "../../../src/App.css";
+import "./Header.css";
 
 function Header() {
   return (
-    <nav>
-      <a className="App-navigation-link" href="/">
+    <nav className="Container">
+      <a className="Navigation" href="/">
         Home
       </a>{" "}
       |{" "}
-      <a className="App-navigation-link" href="/add">
+      <a className="Navigation" href="/add">
         Add City
       </a>
     </nav>

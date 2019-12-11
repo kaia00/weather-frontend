@@ -1,5 +1,5 @@
 import React from "react";
-import AddCity from "./AddCity";
+import AddCity from "./addcity/AddCity";
 import HomePage from "./HomePage";
 import Header from "./common/Header";
 

@@ -1,8 +1,4 @@
-.App {
-  text-align: center;
-}
-
-.App-header {
+.Content {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -13,11 +9,19 @@
   color: white;
 }
 
-.Welcome {
-  text-align: center;
+.Label {
+  margin-bottom: 16pt;
 }
 
-.Delete {
-  background: "red";
+.Input-style {
   border: "2px solid pink";
+}
+
+.SaveButton-style {
+  background-color: #7f82b3;
+  color: white;
+  font-size: 16px;
+  margin: 24px;
+  width: 100px;
+  padding: 8px;
 }

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-//import Constants from "src/Constants";
+import "./AddCity.css";
 
 const AddCity = () => {
   const [cityName, setCityName] = useState("");
@@ -25,31 +25,21 @@ const AddCity = () => {
       });
   };
   return (
-    <div>
-      <label htmlFor="cityName">Enter cityname:</label>
+    <div className="Content">
+      <label className="Label" htmlFor="cityName">Enter cityname:</label>
       <input
-        style={inputStyle}
+        className="Input-style"
         id="cityName"
         name="cityName"
         type="text"
         value={cityName}
         onChange={handleChange}
       />
-      <button style={saveButtonStyle} onClick={handleSubmit}>
+      <button className="SaveButton-style" onClick={handleSubmit}>
         Save city!
       </button>
     </div>
   );
 };
-
-const inputStyle = {
-  border: "2px solid pink"
-};
-
-const saveButtonStyle = {
-  background: "white",
-  border: "2px solid pink"
-};
-
 
 export default AddCity;
