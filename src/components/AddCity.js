@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+//import Constants from "src/Constants";
 
 const AddCity = () => {
   const [cityName, setCityName] = useState("");
@@ -25,7 +26,7 @@ const AddCity = () => {
   };
   return (
     <div>
-      <label htmlFor="cityName">Enter cityname</label>
+      <label htmlFor="cityName">Enter cityname:</label>
       <input
         style={inputStyle}
         id="cityName"
@@ -46,8 +47,9 @@ const inputStyle = {
 };
 
 const saveButtonStyle = {
-  background: "lime",
+  background: "white",
   border: "2px solid pink"
 };
+
 
 export default AddCity;

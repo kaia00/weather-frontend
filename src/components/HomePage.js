@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import WeatherBox from "./WeatherBox";
+import "../../src/App.css";
 
 const HomePage = () => {
   const [cities, setCities] = useState([]);
@@ -31,12 +32,10 @@ const HomePage = () => {
   };
 
   return (
-    <>
-      <h1>
-        Welcome to Weather site! Here you can add city and view all cities
-      </h1>
+    <header className="App-header">
+      <h1 className="Welcome">Welcome to weather information!</h1>
       <div>
-        <h1>List of Cities</h1>
+        <h1>Cities:</h1>
         {cities.length
           ? cities.map(city => (
               <div style={cityStyle} key={city.id}>
@@ -54,8 +53,10 @@ const HomePage = () => {
             ))
           : null}
       </div>
-      <a href="/add">Add City here</a>
-    </>
+      <a className="App-navigation-link" href="/add">
+        Add City
+      </a>
+    </header>
   );
 };
 
