@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import WeatherBox from "./WeatherBox";
+import WeatherBox from "./weather/WeatherBox";
 import "../../src/App.css";
 
 const HomePage = () => {
@@ -38,8 +38,8 @@ const HomePage = () => {
         <h1>Cities:</h1>
         {cities.length
           ? cities.map(city => (
-              <div style={cityStyle} key={city.id}>
-                {city.name}
+              <div key={city.id}>
+                <h1>{city.name}</h1>
                 <button
                   style={deleteButtonStyle}
                   onClick={() => handleDelete(city.id)}
@@ -58,11 +58,6 @@ const HomePage = () => {
       </a>
     </header>
   );
-};
-
-const cityStyle = {
-  fontSize: "45px",
-  textAlign: "center"
 };
 
 const deleteButtonStyle = {

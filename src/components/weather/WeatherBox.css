@@ -1,0 +1,10 @@
+.Weather-container {
+  margin: "16px";
+  border: "5px black";
+  padding: "16px";
+}
+
+.Weather-content {
+  font-size: "15px";
+  text-align: "start";
+}
