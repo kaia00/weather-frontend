@@ -7,7 +7,7 @@ const HomePage = () => {
 
   const fetchCities = () => {
     axios
-      .get("https://ilmainfo.herokuapp.com/cities/", { crossdomain: true })
+      .get("https://ilmainfo.herokuapp.com/cities/")
       .then(response => {
         setCities(response.data);
       })
