@@ -37,20 +37,17 @@ const HomePage = () => {
       <div>
         {cities
           ? cities.map(city => (
-              <div>
-                <h1>Cities:</h1>
-                <div key={city.id}>
-                  <h1>{city.name}</h1>
-                  <button
-                    className="Delete"
-                    onClick={() => handleDelete(city.id)}
-                  >
-                    delete
-                  </button>
-                  {city.weathers.map(weather => (
-                    <WeatherBox key={weather.id} weather={weather} />
-                  ))}
-                </div>
+              <div key={city.id}>
+                <h1>{city.name}</h1>
+                <button
+                  className="Delete"
+                  onClick={() => handleDelete(city.id)}
+                >
+                  delete
+                </button>
+                {city.weathers.map(weather => (
+                  <WeatherBox key={weather.id} weather={weather} />
+                ))}
               </div>
             ))
           : null}
