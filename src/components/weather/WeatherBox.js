@@ -11,7 +11,9 @@ const WeatherBox = props => {
       </div>
       <div className="Weather-content">wind speed: {weather.windSpeed} m/s</div>
       <div className="Weather-content">humidity: {weather.humidity} %</div>
-      <div className="Weather-content">date: {weather.date}</div>
+      <div className="Weather-content">
+        date: {weather.date.toLocaleDateString()}
+      </div>
     </div>
   );
 };
