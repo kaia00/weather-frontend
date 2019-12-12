@@ -21,7 +21,9 @@ const HomePage = () => {
 
   const handleDelete = cityId => {
     axios
-      .delete("https://ilmainfo.herokuapp.com/cities/" + cityId)
+      .delete("https://ilmainfo.herokuapp.com/cities/", {
+        q: cityId
+      })
       .then(response => {
         console.log(response);
         fetchCities();
@@ -47,9 +49,13 @@ const HomePage = () => {
                     delete
                   </button>
                 </>
-                {city.weathers.map(weather => (
-                  <WeatherBox key={weather.id} weather={weather} />
-                ))}
+                {city.weathers.size ? (
+                  city.weathers.map(weather => (
+                    <WeatherBox key={weather.id} weather={weather} />
+                  ))
+                ) : (
+                  <h1> No weather information available. </h1>
+                )}
               </div>
             ))
           : null}
