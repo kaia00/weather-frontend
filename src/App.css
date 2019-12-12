@@ -18,10 +18,10 @@
 }
 
 .Delete {
-  background-color: red;
+  background-color: #7f82b3;
   color: white;
   font-size: 16px;
-  margin: 24px;
-  width: 100px;
+  margin-left: 16px;
+  width: 80px;
   padding: 8px;
 }

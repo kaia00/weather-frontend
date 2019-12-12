@@ -26,7 +26,9 @@ const AddCity = () => {
   };
   return (
     <div className="Content">
-      <label className="Label" htmlFor="cityName">Enter cityname:</label>
+      <label className="Label" htmlFor="cityName">
+        Enter cityname:
+      </label>
       <input
         className="Input"
         id="cityName"
