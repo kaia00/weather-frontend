@@ -17,7 +17,12 @@ const AddCity = () => {
       .then(response => {
         console.log(response);
         setCityName("");
-        alert("City was added");
+        if (response.status === "201") {
+          alert("City was added");
+        } else if (response.status === "200") {
+          setCityName("");
+          alert("City already exists!");
+        }
       })
       .catch(error => {
         console.error(error);
