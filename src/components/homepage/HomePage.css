@@ -1,0 +1,23 @@
+.Container {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.Welcome {
+  text-align: center;
+}
+
+.Delete {
+  background-color: #7f82b3;
+  color: white;
+  font-size: 16px;
+  margin-left: 16px;
+  width: 80px;
+  padding: 8px;
+}

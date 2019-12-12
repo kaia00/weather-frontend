@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import WeatherBox from "./weather/WeatherBox";
+import WeatherBox from "../weather/WeatherBox";
 import "../../src/App.css";
 
 const HomePage = () => {
@@ -32,7 +32,7 @@ const HomePage = () => {
   };
 
   return (
-    <header className="App-header">
+    <header className="Container">
       <h1 className="Welcome">Welcome to weather information!</h1>
       <div>
         {cities
@@ -45,7 +45,7 @@ const HomePage = () => {
                 >
                   delete
                 </button>
-                {city.weathers? (
+                {city.weathers.length ? (
                   city.weathers.map(weather => (
                     <WeatherBox key={weather.id} weather={weather} />
                   ))
