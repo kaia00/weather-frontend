@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import WeatherBox from "../weather/WeatherBox";
-import "../../src/App.css";
+import "./HomePage.css";
 
 const HomePage = () => {
   const [cities, setCities] = useState([]);
@@ -32,7 +32,7 @@ const HomePage = () => {
   };
 
   return (
-    <header className="Container">
+    <header className="App-header">
       <h1 className="Welcome">Welcome to weather information!</h1>
       <div>
         {cities

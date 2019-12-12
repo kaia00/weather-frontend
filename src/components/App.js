@@ -1,7 +1,7 @@
 import React from "react";
-import AddCity from "./components/addcity/AddCity";
-import HomePage from "../HomePage";
-import Header from "./components/common/Header";
+import AddCity from "./addcity/AddCity";
+import HomePage from "./homepage/HomePage";
+import Header from "./common/Header";
 
 const App = () => {
   const getPage = () => {
